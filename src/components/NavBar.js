@@ -5,18 +5,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function NavBar() {
     return(
-        <div>
-            <Navbar className="nav" bg="light" expand="lg">
+        <div className="nav">
+            <Navbar bg="light" expand="lg">
             <Container>
             <Navbar.Brand href="#home">React-JWT-Auth</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Login</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
             <NavDropdown title="Register" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">New Account</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Login</NavDropdown.Item>
+            <NavDropdown.Item href="/register">New Account</NavDropdown.Item>
+            <NavDropdown.Item href="/login">Login</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
