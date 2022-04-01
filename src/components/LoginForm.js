@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
 export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+         e.preventDefault();
+         console.log({email,password})
+  }
+  
   return(
     <div>
-      <h2>log in</h2>
-       <Form>
+      <h3>log in</h3>
+       <Form onSubmit={handleSubmit}>
           <label>
-            <h3>email</h3>
-            <input type="text" name="email" />
+            <input type="text" name="email" placeholder="email" required 
+              onChange={e => setEmail(e.target.value)}/>
           </label>
           <label>
-            <h3>password</h3>
-            <input type="text" name="password" />
+            <input type="text" name="password" placeholder="password" required 
+              onChange={e => setPassword(e.target.value)}/>
           </label>
           <Button>submit</Button>
       </Form>
