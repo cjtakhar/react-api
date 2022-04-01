@@ -6,17 +6,13 @@ body {
   height: 50vh;
 }
 
-form {
+Form {
   border: solid 2px;
   padding: 10%;
 }
 
-.btn {
-   margin: 20px 0;
-   width: 70px;
-   height: 30px;
-   background: white;
-   border: solid 1px;
-   border-radius: 5%;
+Button {
+  margin: 5%;
 }
+
  
